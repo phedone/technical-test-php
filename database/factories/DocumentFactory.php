@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
@@ -9,7 +10,7 @@ use Illuminate\Support\Str;
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\User>
  */
-class UserFactory extends Factory
+class DocumentFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -19,7 +20,9 @@ class UserFactory extends Factory
     public function definition(): array
     {
         return [
-            'folders' => $this->faker->words(3, true),
+            'uri' => $this->faker->url,
+            'title' => $this->faker->sentence,
+            'user_id' => User::factory(),
         ];
     }
 }
