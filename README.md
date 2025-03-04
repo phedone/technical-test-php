@@ -16,7 +16,7 @@ You will be integrating these two services to handle asynchronous retrieval and 
    - A user has one or more folders.
    - Each folder may contain multiple documents.
 2.	**Triggering a Document Fetch**
-   - From the Laravel side, a user action (or a Laravel Action) will initiate a request to the FastAPI microservice, requesting document info for that user’s folders.
+   - From the Laravel side, a <a href="https://www.laravelactions.com/">Laravel Action</a> will initiate a request to the FastAPI microservice, requesting document info for that user’s folders.
    - This call will be made asynchronously (the Laravel side should not block/wait in a naive manner).
 3.	**Retrieving Documents (FastAPI)**
    - The FastAPI microservice will receive the request from Laravel.
@@ -28,7 +28,8 @@ You will be integrating these two services to handle asynchronous retrieval and 
 
 ### Authentication
 - Communication between Laravel and FastAPI uses HTTP.
-- Both sides share a private token (a simple static/shared secret) to authenticate requests.
+- You'll authenticate request via a private token with the header 'Private-Token'. You can generate it the way you want
+- We can discuss some ways to increase security and why just having a private token is not enough in real cases scenario.
 
 ## What We Are Evaluating
 

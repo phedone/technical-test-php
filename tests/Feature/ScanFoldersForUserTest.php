@@ -7,7 +7,7 @@ beforeEach(function () {
     $this->user = User::factory()->create();
 });
 
-it('test basic', function () {
+it('should run scan', function () {
     ScanFoldersForUser::run(user: $this->user);
     expect(true)->toBeTrue();
 });
