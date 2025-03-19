@@ -50,10 +50,10 @@ _Note: It is perfectly fine if you do not complete everything within the time li
 
 ```bash
 # Macos
-/bin/bash -c "$(curl -fsSL https://php.new/install/mac/8.4)"
+brew install php"
 
 # Linux
-/bin/bash -c "$(curl -fsSL https://php.new/install/linux/8.4)"
+sudo apt-get install php"
 
 # Windows Powershell
 # Run as administrator...
