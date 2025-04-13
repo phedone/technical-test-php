@@ -35,4 +35,9 @@ return [
         ],
     ],
 
+    'document_api' => [
+        'url' => env('DOCUMENT_API_URL', 'http://localhost:8000'),
+        'token' => env('DOCUMENT_API_TOKEN', 'secret-token'),
+    ],
+
 ];
